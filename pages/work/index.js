@@ -77,7 +77,7 @@ const About = () => {
 >
   My Bussiness Card
 </a>
-            </div>
+            </div><br/>
           </div>
         </motion.div>
 
