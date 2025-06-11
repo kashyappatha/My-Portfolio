@@ -42,39 +42,41 @@ const slugs = [
   "figma",
 ];
 const Services = () => {
-  return <div className="h-full bg-primary py-36 flex items-center">
-    <Circles/>
-    <Particles
-        className="absolute inset-0 "
+  return (
+    <div className="h-full bg-primary py-10 lg:py-20 px-5 lg:px-20 flex items-center justify-center relative">
+      <Circles />
+      <Particles
+        className="absolute inset-0"
         quantity={100}
         ease={80}
-        // color={color}
         refresh
       />
-      <Bulb/>
-       
-      <div className="container mx-auto flex xl:flex-row gap-8 items-center">
-  {/* Left side: Icon Cloud */}
-  <motion.div variants={fadeIn('down', 0.4)} initial='hidden' animate='show' exit='hidden'>
-
-  <div className="hidden xl:block mb-60">
-  {/* <IconCloud iconSlugs={slugs}  /> */}
-</div>
-</motion.div>
-
-
-  {/* Right side: Content */}
-  {/* <div className="flex-1 xl:mt-8  ">
-    <h2 className="h2">My Projects<span className="text-accent"></span></h2>
-    <p className="mb-4 max-w-[300px] mx-auto lg:mx-0">
-      Bussiness insurance - Where we used Technolody Laravel Orchid Package.Made Dynamic sections.
-    </p>
-    
-  </div> */}
-  <ServiceSlider/>
-</div>
-
-  </div>;
+      <Bulb />
+  
+      {/* Responsive Grid Wrapper */}
+      <div className="overflow-y-auto md:overflow-visible max-h-[500px] md:max-h-full">
+        {/* Left side: Icon Cloud */}
+        <motion.div
+          variants={fadeIn("down", 0.4)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="min-w-[300px]"
+        >
+          
+        </motion.div>
+  
+        {/* Right side: Service Slider */}
+        <div className="min-w-[300px]">
+          <ServiceSlider />
+        </div>
+  
+        {/* Optional: Add more items if needed */}
+        {/* <div className="min-w-[300px]">Another Item</div> */}
+      </div>
+    </div>
+  );
+  
 
 };
 

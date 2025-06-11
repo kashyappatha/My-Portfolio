@@ -1,135 +1,86 @@
-// icons
-import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
-  RxArrowTopRight,
-} from "react-icons/rx";
+import { RxArrowTopRight } from "react-icons/rx";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
-import {Swiper , SwiperSlide} from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
 import {
   FaHtml5,
   FaWordpress,
   FaLaravel,
   FaShopify,
-  FaPhp,
- 
 } from "react-icons/fa";
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
-
-import { FreeMode, Pagination } from "swiper";
-import Link from "next/link";
-
-
-
-// data
+// Your projects data
 const serviceData = [
   {
-    icon: <FaLaravel color="red"/>,
-    title: 'Bussiness insurence',
-    technplpgy: 'Laravel Orchid',
-    description: 'Here I Made Dynamic Section using Laravel Orchid.',
-    Link: 'http://laravel.gwcabinet.com/',
+    icon: <FaLaravel color="red" />,
+    title: "Bussiness Insurance",
+    technplpgy: "Laravel Orchid",
+    description: "Made dynamic section using Laravel Orchid.",
+    Link: "http://laravel.gwcabinet.com/",
   },
   {
-    icon: <FaLaravel color="red"/>,
-    title: 'Listit',
-    technplpgy: 'Laravel , Mysql',
-    description: 'Here We made some changes using laravel, javascript.',
-    Link:'https://github.com/kashyap-credsoft/'
-  },
-  {
-    icon: <FaWordpress color="blue" text='white' />,
-    title: 'Phonestation',
-    technplpgy: 'Elementor',
-    description: 'we made some changes like fonts,sections in wordpress. using Genesis Theme',
-    Link: 'https://www.phonestationplus.com/'
+    icon: <FaLaravel color="red" />,
+    title: "Listit",
+    technplpgy: "Laravel, MySQL",
+    description: "Made some changes using Laravel, JavaScript.",
+    Link: "https://github.com/kashyap-credsoft/",
   },
   {
     icon: <FaWordpress color="blue" />,
-    title: 'CSAT African ',
-    technplpgy: 'Wordpress',
-    description: 'Here I made all pages and sections using Kentwood theme',
-    Link: 'csatafrique.org'
+    title: "Phonestation",
+    technplpgy: "Elementor",
+    description: "Modified fonts & sections in WordPress (Genesis Theme).",
+    Link: "https://www.phonestationplus.com/",
   },
   {
     icon: <FaWordpress color="blue" />,
-    title: 'OruWest',
-    technplpgy: 'Wordpress',
-    description: 'Here i made page of wordpress',
-    Link: 'https://www.oruwestlga.ng/'
+    title: "CSAT African",
+    technplpgy: "WordPress",
+    description: "Built all pages using Kentwood theme.",
+    Link: "https://csatafrique.org",
   },
-  {
-    icon: <FaShopify color="green"/>,
-    title: 'AVL',
-    technplpgy: 'Shopify',
-    description: 'Made sections various changes in shopify site',
-  },
-  {
-    icon: <FaHtml5 color="orange" />,
-    title: 'HTML Template',
-    technplpgy: 'Shopify',
-    description: 'whiskys mail template and add to shopify',
-  },
-  
+
+
 ];
-const ServiceSlider = () => {
-  return     <>
-  
- <Swiper
-  breakpoints={{
-    320:{
-      slidesPerView:1,
-      spaceBetween:15,
-    },
 
-    640:{
-      slidesPerView:3,
-      spaceBetween:15,
-    }
-  }}
-  freeMode={true}
-  pagination={{clickable:true}}
-  modules={[FreeMode,Pagination]}
-  className=""
-  >
-    {
-      
-    serviceData.map((item, index) => {
-      return <SwiperSlide key={index}>
-        <motion.div variants={fadeIn('down', 0.4)} initial='hidden' animate='show' exit='hidden'>
-        <div className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-4 py-8 flex sm:flex-col gap-x-4 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,169,0.15) transition-all duration-300]">
-          
-          <div className="text-3xl ">{item.icon}</div><br/>
-          <div>
-            <div>{item.title}</div>
-            <div>Technology - {item.technplpgy}</div>
-            <p>{item.description}</p>
-          </div>&nbsp;
-          <div className="text-3xl">
-            <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent" onClick={() => window.open(item.Link)}/>
+const ServiceGrid = () => {
+  return (
+    <div className="px-4 xl:px-0">
+      <h2 className="text-2xl font-semibold mb-6 text-center xl:text-left">
+        Company Projects Where I Worked
+      </h2>
+
+      <motion.div
+        variants={fadeIn("down", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        {serviceData.map((item, index) => (
+          <div
+            key={index}
+            className="bg-[rgba(65,47,123,0.15)] rounded-lg p-6 flex flex-col gap-4 group hover:bg-[rgba(89,169,0.15)] transition-all duration-300"
+          >
+            <div className="text-3xl">{item.icon}</div>
+            <div>
+              <h3 className="font-semibold">{item.title}</h3>
+              <p className="text-sm">Technology - {item.technplpgy}</p>
+              <p className="text-sm">{item.description}</p>
+            </div>
+            {item.Link && (
+              <div className="text-3xl self-end">
+                <RxArrowTopRight
+                  className="group-hover:rotate-45 group-hover:text-accent cursor-pointer"
+                  onClick={() => window.open(item.Link)}
+                />
+              </div>
+            )}
           </div>
-        </div>
-        </motion.div>
-        
-      </SwiperSlide>
-      
-    })
-   
-  }       
-
-<h2 className="flex text-2xl justify-center md:justify-start p-4">Compney Project Where i Work.</h2>
-  </Swiper>
-  </>
-  
+        ))}
+      </motion.div>
+    </div>
+  );
 };
 
-
-export default ServiceSlider;
+export default ServiceGrid;
