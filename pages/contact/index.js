@@ -70,16 +70,14 @@ export default function Contact() {
   };
 
   return (
-    <motion.div variants={fadeIn('down', 0.4)} initial='hidden' animate='show' exit='hidden' className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-primary-700 to-gray-900 mt-7 md:mb-2 px-8 sm:px-0">
+    <motion.div variants={fadeIn('down', 0.4)} initial='hidden' animate='show' exit='hidden' className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-primary-700 to-gray-900 mt-4 md:mb-4 px-8 sm:px-0">
       <Meteors className="absolute z-10"/>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl z-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-600 max-w-4xl z-20">
         <form
           onSubmit={handleSubmit}
           className="bg-primary bg-opacity-20 backdrop-blur-lg p-4 rounded-lg shadow-lg border border-gray-300 max-h-[400px] md:max-h-[600px] overflow-y-auto"
         > 
-          <h2 className="text-2xl font-bold text-center text-white mb-6">
-            Contact Us
-          </h2>
+          
           <div className="mb-4">
             <label
               htmlFor="name"
