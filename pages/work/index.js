@@ -30,7 +30,7 @@ const About = () => {
             <h2 className="text-2xl font-semibold text-accent">Dcoded Innovation</h2>
             <p className="text-lg text-bold text-white">Webdeveloper Intern</p>
             <p className="text-lg text-bold text-white">Duration - 6 Month</p>
-            <p className="text-lg text-bold text-white">Technology - Laravel</p>
+            <p className="text-lg text-bold text-white">Technology - php, Laravel</p><br></br>
             
           </div>
           
