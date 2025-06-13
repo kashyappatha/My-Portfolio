@@ -182,7 +182,7 @@ const About = () => {
     <TypingAnimation/>
    <div className="container max-h-[400px] xl:max-h-[600px] mx-auto h-auto flex flex-col items-center xl:flex-row gap-x-6 xl:overflow-y-hidden overflow-y-scroll ">
       <div className="flex-1 flex flex-col justify-center p-3 xl:p-0">
-      <motion.span variants={fadeIn('down', 0.4)} initial='hidden' animate='show' exit='hidden' className='h1 z-10'> <h1 className="text-2xl font-bold mb-0 ">Let&apos;s See </h1></motion.span>
+      <motion.span variants={fadeIn('down', 0.4)} initial='hidden' animate='show' exit='hidden' className='h1 z-10 hidden md:inline'> <h1 className="text-2xl font-bold mb-0 ">Let&apos;s See </h1></motion.span>
       <GradualSpacing
       className="font-display text-justify text-4xl font-bold -tracking-widest  text-white dark:text-white md:text-4xl md:leading-[5rem]"
       text="About Me"
@@ -194,7 +194,7 @@ const About = () => {
   </p>
  
   <p className="text-lg mb-2 text-justify max-w-[500px] mx-auto xl:mx-0 text-white">
-   I have Knowledge of Computer So Open For Related Works.
+   I have Knowledge of Computer Programming, Exploring AI(Artificial Intelligence) so I open for Any IT related Job.
   </p>
   <p className="text-lg mb-2 text-justify max-w-[500px] mx-auto xl:mx-0 text-white">
     Currently, I am working at Credsoft Technologies since July - 2024.
@@ -224,7 +224,7 @@ const About = () => {
       </div>
       </motion.div>
       </div>
-      <div className="flex flex-col w-full xl:max-w-[48%] h-[480px] text-white">
+      <div className="hidden md:flex flex-col w-full xl:max-w-[48%] h-[480px] text-white">
         <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
           {aboutData.map((item, itemIndex) => {
             return(

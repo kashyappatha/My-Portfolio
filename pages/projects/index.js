@@ -54,8 +54,8 @@ const Services = () => {
       <Bulb />
   
       {/* Responsive Grid Wrapper */}
-      <div className="overflow-y-auto md:overflow-visible max-h-[500px] md:max-h-full">
-        {/* Left side: Icon Cloud */}
+      <div className=" md:overflow-hidden max-h-[60vh] md:max-h-full">
+      {/* Left side: Icon Cloud */}
         <motion.div
           variants={fadeIn("down", 0.4)}
           initial="hidden"

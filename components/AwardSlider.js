@@ -42,7 +42,7 @@ const awardData = [
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQEBeAY8apIL6Q/feedshare-shrink_1280/feedshare-shrink_1280/0/1714032933324?e=1738800000&v=beta&t=iYIlhvcNCBe6wA--JC9pQw9LV1eUgDWTMrF4sznVu4E',
     title: 'Patent Register Gesture chair',
     technplpgy: 'patent registered chair design',
-    description: 'Here I made designiin sem 6 of ict  where collage apply for patent apporve from goverment',
+    description: 'Here I made designin in sem 6 of ict  where collage apply for patent apporve from goverment',
   },
   {
     icon: <FaAward color="gold" />,

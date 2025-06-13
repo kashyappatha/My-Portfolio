@@ -46,7 +46,7 @@ const serviceData = [
 const ServiceGrid = () => {
   return (
     <div className="px-4 xl:px-0">
-      <h2 className="text-2xl font-semibold mb-6 text-center xl:text-left">
+      <h2 className="hidden md:block  text-2xl font-semibold mb-6 text-center xl:text-left">
         Company Projects Where I Worked
       </h2>
 

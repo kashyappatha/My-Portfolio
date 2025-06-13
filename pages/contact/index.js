@@ -72,10 +72,10 @@ export default function Contact() {
   return (
     <motion.div variants={fadeIn('down', 0.4)} initial='hidden' animate='show' exit='hidden' className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-primary-700 to-gray-900 mt-4 md:mb-4 px-8 sm:px-0">
       <Meteors className="absolute z-10"/>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-600 max-w-4xl z-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-600 max-w-3xl z-20">
         <form
           onSubmit={handleSubmit}
-          className="bg-primary bg-opacity-20 backdrop-blur-lg p-4 rounded-lg shadow-lg border border-gray-300 max-h-[400px] md:max-h-[600px] overflow-y-auto"
+          className="bg-primary bg-opacity-20 backdrop-blur-lg p-4 rounded-lg shadow-lg border border-gray-300 max-h-[500px] md:max-h-[600px] overflow-y-auto"
         > 
           
           <div className="mb-4">
@@ -131,7 +131,7 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               className={`w-full px-4 py-2 border ${errors.message ? 'border-red-500' : 'border-gray-400'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent text-white`}
-              rows="2"
+              rows="1"
               disabled={loading}
             />
             {errors.message && (
@@ -154,7 +154,7 @@ export default function Contact() {
         </form>
         <div className="bg-primary bg-opacity-20 p-8 rounded-lg shadow-lg border border-gray-300 flex flex-col justify-center items-center hidden sm:flex">
           <h2 className="text-2xl font-bold text-center text-white mb-4">Contact Details</h2>
-          <p className="text-white tracking-wide sans-serif">Feel free to reach out to us via the form or at:</p>
+          <p className="text-white tracking-wide sans-serif">Feel free to reach out to us.</p>
           <p className="text-white tracking-wide sans-serif">Email: pathakkashyap80@gmail.com</p>
           <p className="text-white tracking-wide sans-serif">Phone: +917990653556</p>
         </div>
