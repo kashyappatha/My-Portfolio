@@ -76,8 +76,8 @@ const ServiceGrid = () => {
         {serviceData.map((item, index) => (
           <div
             key={index}
-            className="bg-[rgba(65,47,123,0.15)] rounded-lg p-3 flex flex-col gap-4 group hover:bg-[rgba(89,169,0.15)] transition-all duration-300"
-          >
+            className={`bg-[rgba(65,47,123,0.15)] rounded-lg p-3 flex flex-col gap-4 group hover:bg-[rgba(89,169,0.15)] transition-all duration-300 
+              ${index > 1 ? 'hidden md:flex' : ''}`}          >
             <div className="text-3xl">{item.icon}</div>
             <div>
               <h3 className="font-semibold">{item.title}</h3>
