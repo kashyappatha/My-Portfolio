@@ -180,7 +180,7 @@ const About = () => {
     <Circles/>
     <Meteors/>
     <TypingAnimation/>
-   <div className="container max-h-[400px] xl:max-h-[600px] mx-auto h-auto flex flex-col items-center xl:flex-row gap-x-6 xl:overflow-y-hidden overflow-y-scroll ">
+   <div className="container max-h-[400px] xl:max-h-[600px] mx-auto h-auto flex flex-col items-center xl:flex-row gap-x-6 xl:overflow-y-hidden ">
       <div className="flex-1 flex flex-col justify-center p-3 xl:p-0">
       <motion.span variants={fadeIn('down', 0.4)} initial='hidden' animate='show' exit='hidden' className='h1 z-10 hidden md:inline'> <h1 className="text-2xl font-bold mb-0 ">Let&apos;s See </h1></motion.span>
       <GradualSpacing

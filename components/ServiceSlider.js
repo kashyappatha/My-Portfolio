@@ -9,6 +9,22 @@ import {
   FaShopify,
 } from "react-icons/fa";
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Tailwind's `md` breakpoint
+    };
+
+    handleResize(); // Run on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return isMobile;
+}
+
 // Your projects data
 const serviceData = [
   {
@@ -60,7 +76,7 @@ const ServiceGrid = () => {
         {serviceData.map((item, index) => (
           <div
             key={index}
-            className="bg-[rgba(65,47,123,0.15)] rounded-lg p-6 flex flex-col gap-4 group hover:bg-[rgba(89,169,0.15)] transition-all duration-300"
+            className="bg-[rgba(65,47,123,0.15)] rounded-lg p-3 flex flex-col gap-4 group hover:bg-[rgba(89,169,0.15)] transition-all duration-300"
           >
             <div className="text-3xl">{item.icon}</div>
             <div>
